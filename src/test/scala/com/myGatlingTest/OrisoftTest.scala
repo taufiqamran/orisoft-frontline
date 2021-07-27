@@ -9,8 +9,10 @@ import scala.concurrent.duration._
 
 class OrisoftTest extends Simulation{
 
+  //val domain = "http://localhost:37953/"
+  val domain = "https://orisoftst.orisoftsaas.com"
   val httpProtocol = http
-    .baseUrl("https://orisoftst.orisoftsaas.com")
+    .baseUrl(domain)
     .disableFollowRedirect
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36")
 
@@ -23,6 +25,6 @@ class OrisoftTest extends Simulation{
 
   val scnMyDocumentCreate = scenario("Create Document").exec(login,document)
 
-  setUp(scnMyDocumentCreate.inject(rampUsers(5) during (5 minutes)).protocols(httpProtocol))
+  setUp(scnMyDocumentCreate.inject(rampUsers(5) during (5.minutes)).protocols(httpProtocol))
 
 }

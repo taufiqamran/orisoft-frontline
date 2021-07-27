@@ -49,7 +49,6 @@ object ESSEMPMyDocument {
       .pause(227.milliseconds)
       .exec(http("request_59")
         .get("/Notifications/GetNotificationsList?row=8")
-
       )
   }
 

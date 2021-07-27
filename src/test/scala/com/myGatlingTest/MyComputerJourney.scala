@@ -45,10 +45,10 @@ class MyComputerJourney extends Simulation {
 
 	setUp(
 		scn.inject(
-			nothingFor(5 seconds),
+			nothingFor(5.seconds),
 			atOnceUsers(1),
-			rampUsers(5) during (10 seconds),
-			constantUsersPerSec(20) during (20 seconds)
+			rampUsers(5) during (10.seconds),
+			constantUsersPerSec(20) during (20.seconds)
 		).protocols(httpProtocol)
 	)
 
