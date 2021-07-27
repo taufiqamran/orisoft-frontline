@@ -24,7 +24,12 @@ class OrisoftTest extends Simulation{
 
 
   val scnMyDocumentCreate = scenario("Create Document").exec(login,document)
+  val test = scenario("test").exec(document)
 
-  setUp(scnMyDocumentCreate.inject(rampUsers(5) during (5.minutes)).protocols(httpProtocol))
+  setUp(scnMyDocumentCreate.inject(rampUsers(5).during(1.minutes))
+
+    .andThen(test.inject(rampUsers(5).during(1.minutes)))
+  ).protocols(httpProtocol)
+
 
 }
