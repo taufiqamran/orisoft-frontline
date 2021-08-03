@@ -36,9 +36,9 @@
   <build>
     <!-- so that maven compiles src/test/scala and not just src/test/java -->
     <testSourceDirectory>src/test/scala</testSourceDirectory>
+
     <plugins>
       <plugin>
-        <!-- so that maven can create a jar -->
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.2.0</version>
       </plugin>
@@ -47,7 +47,7 @@
       <plugin>
         <groupId>net.alchim31.maven</groupId>
         <artifactId>scala-maven-plugin</artifactId>
-        <version>4.3.1</version>
+        <version>4.4.1</version>
         <executions>
           <execution>
             <goals>
@@ -72,10 +72,11 @@
       </plugin>
 
       <!-- so maven can build a package for FrontLine -->
+      <!-- so maven can build a package for Gatling Enterprise -->
       <plugin>
         <groupId>io.gatling.frontline</groupId>
         <artifactId>frontline-maven-plugin</artifactId>
-        <version>1.0.3</version>
+        <version>1.2.1</version>
         <executions>
           <execution>
             <goals>
