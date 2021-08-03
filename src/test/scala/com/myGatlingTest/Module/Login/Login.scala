@@ -38,7 +38,7 @@ object Login {
         .formParam("btnSignIn", "Sign In")
         .formParam("DXScript", "1_303,1_210,1_184,1_220,1_187,1_181,1_279,1_292,1_208,1_216,1_212,1_189,1_222,17_42,1_297,1_215,1_207,1_289,1_205,17_7,1_287,1_211,17_23,1_197,17_1")
         .formParam("DXCss", "/Content/css?v=w9USDPGryprQSMA62T1giyRXrtqAIG-BphxyQY0Qw_w1,1_17,0_2214,1_50,1_53,1_51,1_16,0_2219,0_2312,0_2317")
-        .formParam("DXMVCEditorsValues", """{"CUSTOMER_CODE":"PNT","USERID":"TEST0005","USERPWD":"pantai123","selLanguage_DDD_L":[],"selLanguage":null}""")
+        .formParam("DXMVCEditorsValues", """{"CUSTOMER_CODE":"PNT","USERID":"${Username}","USERPWD":"pantai123","selLanguage_DDD_L":[],"selLanguage":null}""")
         .check(status.is(302)))
 
       /*.exec(session =>{
